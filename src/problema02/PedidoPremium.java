@@ -30,10 +30,13 @@ public class PedidoPremium extends Pedido {
 
 	@Override
 	public double comision() {
+		if(this.entregado != null) {
 		if(this.productos.size() > 10) {
 			return 50 + this.precio()*0.15;
 		}
 		return this.precio()*0.15;
+		}
+		return 0;
 	}
 	
 	

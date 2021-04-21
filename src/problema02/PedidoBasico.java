@@ -37,7 +37,8 @@ public class PedidoBasico extends Pedido {
 
 	@Override
 	public double comision() {
-		return this.precio()*0.1;
+		if(this.entregado != null) return this.precio()*0.1;
+		return 0;
 	}
 	
 
