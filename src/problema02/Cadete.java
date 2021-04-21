@@ -4,22 +4,22 @@ import java.util.ArrayList;
 
 public class Cadete {
 	String nombre;
-	ArrayList<Pedido> pedidos;
+	ArrayList<Comisionable> pedidos;
 	
 	
 	public Cadete (String nombre) {
 		this.nombre = nombre;
-		this.pedidos = new ArrayList<Pedido> ();
+		this.pedidos = new ArrayList<Comisionable> ();
 	}
 	
-	public void agregarPedido (Pedido p) {
+	public void agregarComisionable (Comisionable p) {
 		this.pedidos.add(p);
 	}
 	
 	public double comisiones() {
 		double total = 0;
 		
-		for(Pedido p : this.pedidos) {
+		for(Comisionable p : this.pedidos) {
 			total+=p.comision();
 		}
 	

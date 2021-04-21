@@ -7,10 +7,15 @@ public class App {
 
 		Cadete c1 = new Cadete("Juan");
 		PedidoBasico p2 = new PedidoBasico(true);
-		PedidoPremium p3 = new PedidoPremium();
+		Producto aux = new Producto();
+		aux.setCosto(100);
+		p2.agregarProducto(aux);
+		Tramite t1 = new Tramite();
 		p2.entregado();
-		c1.agregarPedido(p2);
+		c1.agregarComisionable(p2);
+		c1.agregarComisionable(t1);
 		
+		System.out.println(c1.comisiones());
 	}
 
 }

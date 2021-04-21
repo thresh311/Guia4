@@ -9,6 +9,10 @@ public class Producto {
 		return this.costo;
 	}
 	
+	public void setCosto(double cost) {
+		this.costo = cost;
+	}
+	
 	public String toString() {
 		return this.descripcion + ": $" + this.costo; 
 	}

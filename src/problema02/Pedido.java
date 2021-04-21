@@ -3,7 +3,7 @@ package problema02;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public abstract class Pedido {
+public abstract class Pedido implements Comisionable {
 	
 	protected ArrayList<Producto> productos;
 	LocalDate entregado;
